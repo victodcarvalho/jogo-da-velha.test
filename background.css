@@ -1,0 +1,368 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* FUNDO OFF-WHITE */
+    background: #f4f1ea;
+
+    color: #111111;
+
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.jogo {
+
+    width: 100%;
+    max-width: 520px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.mini-titulo {
+
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    font-weight: bold;
+
+    color: #77736c;
+
+    margin-bottom: 10px;
+
+}
+
+
+h1 {
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+header p {
+
+    font-size: 15px;
+
+    color: #77736c;
+
+}
+
+
+header p strong {
+
+    color: #111111;
+
+}
+
+
+/* =========================
+   PLACAR
+========================= */
+
+.placar {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin: 35px auto 25px;
+
+    max-width: 390px;
+
+}
+
+
+.placar-card {
+
+    background: #ebe7df;
+
+    border: 1px solid #d9d4ca;
+
+    border-radius: 14px;
+
+    padding: 14px 8px;
+
+}
+
+
+.placar-card span {
+
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: bold;
+
+    color: #77736c;
+
+    margin-bottom: 5px;
+
+}
+
+
+.placar-card strong {
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================
+   MENSAGEM
+========================= */
+
+#mensagem {
+
+    height: 30px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================
+   TABULEIRO
+========================= */
+
+.tabuleiro {
+
+    width: 100%;
+
+    max-width: 390px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+}
+
+
+/* =========================
+   CASAS
+========================= */
+
+.casa {
+
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    border: 2px solid #1b1b1b;
+
+    border-radius: 18px;
+
+    background: #f8f6f1;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 70px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 900;
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+/* Hover */
+
+.casa:hover:not(:disabled) {
+
+    transform: scale(1.025);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 5px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================
+   X
+========================= */
+
+.casa.x {
+
+    color: #ffffff;
+
+    /*
+       CONTORNO PRETO PARA O X
+       + BRILHO NEON BRANCO
+    */
+
+    -webkit-text-stroke: 2px #111111;
+
+    text-shadow:
+
+        0 0 3px #ffffff,
+
+        0 0 7px #ffffff,
+
+        0 0 15px #ffffff,
+
+        0 0 30px #ffffff;
+
+}
+
+
+/* =========================
+   O
+========================= */
+
+.casa.o {
+
+    color: #050505;
+
+    /*
+       BRILHO NEON PRETO
+    */
+
+    text-shadow:
+
+        0 0 3px #ffffff,
+
+        0 0 5px #000000,
+
+        0 0 12px #000000,
+
+        0 0 20px #000000;
+
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+#reiniciar {
+
+    margin-top: 25px;
+
+    padding: 14px 28px;
+
+    border: 2px solid #111111;
+
+    border-radius: 50px;
+
+    background: transparent;
+
+    color: #111111;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+#reiniciar:hover {
+
+    background: #111111;
+
+    color: #f4f1ea;
+
+    box-shadow:
+
+        0 0 5px #111111,
+
+        0 0 15px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 500px) {
+
+    .jogo {
+
+        padding: 30px 18px;
+
+    }
+
+
+    h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .casa {
+
+        font-size: 55px;
+
+    }
+
+}

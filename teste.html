@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neon Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="background.css">
+</head>
+
+<body>
+
+    <main class="jogo">
+
+        <header>
+            <span class="mini-titulo">jotave test</span>
+
+            <h1>Jogo da Velha</h1>
+
+            <p>
+                Você é <strong>X</strong> · Computador é <strong>O</strong>
+            </p>
+        </header>
+
+
+        <section class="placar">
+
+            <div class="placar-card">
+                <span>VOCÊ</span>
+                <strong id="vitorias">0</strong>
+            </div>
+
+            <div class="placar-card">
+                <span>EMPATES</span>
+                <strong id="empates">0</strong>
+            </div>
+
+            <div class="placar-card">
+                <span>COMPUTADOR</span>
+                <strong id="derrotas">0</strong>
+            </div>
+
+        </section>
+
+
+        <div id="mensagem">
+            Sua vez
+        </div>
+
+
+        <section class="tabuleiro">
+
+            <button class="casa" data-index="0"></button>
+            <button class="casa" data-index="1"></button>
+            <button class="casa" data-index="2"></button>
+
+            <button class="casa" data-index="3"></button>
+            <button class="casa" data-index="4"></button>
+            <button class="casa" data-index="5"></button>
+
+            <button class="casa" data-index="6"></button>
+            <button class="casa" data-index="7"></button>
+            <button class="casa" data-index="8"></button>
+
+        </section>
+
+
+        <button id="reiniciar">
+            NOVA PARTIDA
+        </button>
+
+    </main>
+
+
+    <script src="teste.js"></script>
+
+</body>
+</html>
